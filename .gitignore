@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings/
+target/
+test-output/
+.idea
+*.iml
+overlays
+*.log
+apache-tomcat-8.5.11/logs/*
+ROOT/
