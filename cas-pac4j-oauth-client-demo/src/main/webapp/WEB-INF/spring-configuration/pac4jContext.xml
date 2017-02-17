@@ -16,20 +16,24 @@
         <property name="key" value="OPEWaSoTuAe49K4dSoRvNw" />
         <property name="secret" value="aKmvleltXAmLKcnlMgzRjTsCnhV3QVMVDh153xJttCo" />
     </bean>
-    -->
+
 
     <bean id="caswrapper1" class="org.pac4j.oauth.client.CasOAuthWrapperClient">
         <property name="key" value="this_is_the_key" />
         <property name="secret" value="this_is_the_secret" />
         <property name="casOAuthUrl" value="http://localhost:8080/cas2/oauth2.0" />
     </bean>
+-->
+    <!--
+   <bean id="cas1" class="org.pac4j.cas.client.CasClient">
+       <property name="casLoginUrl" value="http://localhost:8080/cas2/login" />
+       here was commented property name="casProtocol">
+           <util:constant static-field="org.pac4j.cas.client.CasClient.CasProtocol.SAML" />
+       </property
+   </bean>
+   -->
 
-    <bean id="cas1" class="org.pac4j.cas.client.CasClient">
-        <property name="casLoginUrl" value="http://localhost:8080/cas2/login" />
-        <!-- property name="casProtocol">
-            <util:constant static-field="org.pac4j.cas.client.CasClient.CasProtocol.SAML" />
-        </property-->
-    </bean>
+    <!--
 
     <bean id="samlConfig" class="org.pac4j.saml.client.SAML2ClientConfiguration"
           c:keystorePassword="pac4j-demo-passwd"
@@ -38,6 +42,14 @@
           c:identityProviderMetadataPath="resource:testshib-providers.xml" />
 
     <bean id="saml1" class="org.pac4j.saml.client.SAML2Client"
+
           c:configuration-ref="samlConfig" />
+-->
+
+    <bean id="rorpaca" class="org.pac4j.oauth.client.RorPacaClient">
+        <property name="key" value="the_key_for_ror_paca" />
+        <property name="secret" value="the_secret_for_ror_paca" />
+    </bean>
+
 
 </beans>
